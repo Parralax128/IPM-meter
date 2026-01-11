@@ -1,0 +1,65 @@
+enabled= Enabled
+
+calcMethod= Calculation method
+calcMethodSubtext= Gap saving: saves gaps between your inputs for Buffer Size duration
+Input saving: saves amount of inputs for Buffer Size duration
+Utug: saves amount of inputs for Refresh interval
+By room: counts your inputs and your playtime from respawn to change respawn
+
+Dash= Dash
+Demo= Demo dash
+Jump= Jump
+Dirs= Directions
+GrabPress= Grab press
+GrabPressSubtext= Only normal: counts inputs not related to holdables
+Only holdable: counts inputs, which resulted in picking up a holdable
+GrabRelease= Grab release
+GrabReleaseSubtext= Only normal: counts inputs not related to holdables
+Only Holdable: counts inputs, which happened while carrying a holdable
+
+bufferSize= Buffer size
+bufferSizeSubtext= Lifespan of each input in the counter's memory
+
+refreshInterval= Refresh interval
+refreshIntervalSubtext= Time interval between updates of the displayed counter
+
+countPerMinute= Count per Minute
+countPerMinuteSubtext= Whether the counter should display inputs per Minute instead of per Second
+
+decimalPartLength= Decimal digits
+
+posX= Horizontal position (X)
+posY= Vertical position (Y)
+alignment= Alignment
+size= Scale
+sizeSubtext= Text scale, percantage
+useColorSetting= Color format (RGB/Hex)
+r= R (Red)
+g= G (Green)
+b= B (Blue)
+hexColor= Hex color
+outline= Outline
+outlineSubtext= !!! outline is incompatible with custom opacity
+opacity= Opacity
+showCounterTitleMod= Units position
+customCounterTitle= Custom units	
+customCounterTitleSubtext= Your own custom units for counter. Leave empty not to use it
+
+showBG= Show BG
+showBGSubtext= Whether the counter should have a background. 
+
+peakLifeTime= BG catch-up lag 
+peakLifetimeSubtext= Time, which the BG line spends at its peak length
+
+peakDecreaseSpeed= BG catch-up speed
+peakDecreaseSpeedSubtext= Speed of the decreasing BG line length 
+
+showResultRoomCPM= Additional "by room" counter
+showResultRoomCPMSubtext= Briefly shows a separate "by room" counter above the normal one on a room completion
+
+resultSize= Scale
+resultSizeSubtext= Text scale growth over time
+
+duration= Display time
+durationSubtext= Text fade out timer
+copyTextColor= Copy main text color

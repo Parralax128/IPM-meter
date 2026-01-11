@@ -1,0 +1,6 @@
+- Name: IPMmeter
+  Version: 1.0.1
+  DLL: bin/IPMmeter.dll
+  Dependencies:
+    - Name: EverestCore
+      Version: 1.4673.0
