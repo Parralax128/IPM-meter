@@ -2,11 +2,11 @@
 
 class Gap
 {
-    public float lifeTime;
-    public float size;
+    public float LifeTime;
+    public float Size;
     public Gap(float lifeTime, float size)
     {
-        this.lifeTime = lifeTime;
-        this.size = size;
+        this.LifeTime = lifeTime;
+        this.Size = size;
     }
 }

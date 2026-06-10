@@ -4,7 +4,7 @@ using Monocle;
 using Microsoft.Xna.Framework;
 
 
-namespace Celeste.Mod.IPMmeter.CalcMethods;
+namespace Celeste.Mod.IPMmeter.AccountingMethods;
 
 class NaiveVanilla : Accounter
 {

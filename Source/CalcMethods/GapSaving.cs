@@ -43,8 +43,8 @@ class GapSaving : Calculator
         {
             Gap gap = Gaps[c];
 
-            gap.lifeTime -= Engine.DeltaTime;
-            if (gap.lifeTime < 0f)
+            gap.LifeTime -= Engine.DeltaTime;
+            if (gap.LifeTime < 0f)
             {
                 gap = null;
                 Gaps.RemoveAt(c);
@@ -56,7 +56,8 @@ class GapSaving : Calculator
     {
         if (Gaps.Count == 0) return 0f;
         
-        float gapSumSize = (float)Gaps.Sum(selection => selection.size) + gapTimer;
-        return 1f / (float)(gapSumSize / (Gaps.Count + Math.Sign(gapTimer)));
+        float gapSumSize = (float)Gaps.Sum(gap => gap.Size) + gapTimer;
+        float gapCount = Gaps.Count + (gapTimer > 0f ? 1f : 0f);
+        return 1f / (gapSumSize / gapCount);
     }
 }

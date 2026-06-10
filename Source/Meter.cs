@@ -1,4 +1,5 @@
 ﻿using Celeste.Mod.IPMmeter.CalcMethods;
+using Celeste.Mod.IPMmeter.AccountingMethods;
 using Celeste.Mod.IPMmeter.Module;
 using Microsoft.Xna.Framework;
 using Monocle;
@@ -50,19 +51,8 @@ public class Meter : Entity
         None
     }
     
-    //Settings
-    public static CalcMethod method => IPMmeterModule.Settings.CalcMethod;
-    static Options dash => IPMmeterModule.Settings.VanillaAccounting.Dash;
-    static Options demo => IPMmeterModule.Settings.VanillaAccounting.DemoDash;
-    static Options jump => IPMmeterModule.Settings.VanillaAccounting.Jump;
-    static Options dir => IPMmeterModule.Settings.VanillaAccounting.Directions;
-
-    static GrabOptions grabPress => IPMmeterModule.Settings.VanillaAccounting.GrabPress;
-    static GrabOptions grabRelease => IPMmeterModule.Settings.VanillaAccounting.GrabRelease;
-
-    public static float BufferDuration => IPMmeterModule.Settings.BufferSize;
-
-    public static Accounter Accounter;
+    
+    static Accounter Accounter;
     static Calculator Calculator;
 
     static float displayIntervalTimer = 0f;
@@ -151,9 +141,6 @@ public class Meter : Entity
 
     public override void Render()
     {
-        
-
-
         displayIntervalTimer += Engine.DeltaTime;
         if (displayIntervalTimer >= DisplayComponent.Interval)
         {

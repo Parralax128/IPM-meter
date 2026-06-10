@@ -1,7 +1,7 @@
 ﻿using Celeste.Mod.IPMmeter.Module;
 using static Celeste.Mod.IPMmeter.Module.IPMmeterSettings;
 
-namespace Celeste.Mod.IPMmeter.CalcMethods;
+namespace Celeste.Mod.IPMmeter.AccountingMethods;
 
 public abstract class Accounter
 {

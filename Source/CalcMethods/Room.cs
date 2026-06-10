@@ -1,5 +1,4 @@
 ﻿using Monocle;
-using System;
 
 namespace Celeste.Mod.IPMmeter.CalcMethods;
 
@@ -17,7 +16,6 @@ class Room : Calculator
     {
         return inputsAccumulated / roomTimer;
     }
-
     public override void OnRespawn()
     {
         inputsAccumulated = 0;

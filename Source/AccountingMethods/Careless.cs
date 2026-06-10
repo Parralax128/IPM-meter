@@ -6,7 +6,7 @@ using static Monocle.MInput;
 using static Monocle.MInput.MouseData;
 using Microsoft.Xna.Framework;
 
-namespace Celeste.Mod.IPMmeter.CalcMethods;
+namespace Celeste.Mod.IPMmeter.AccountingMethods;
 
 class Careless : Accounter
 {
@@ -14,8 +14,7 @@ class Careless : Accounter
 
     static GamePadData Gamepad => GamePads[Input.Gamepad];
     static Buttons[] padButtons = Enum.GetValues<Buttons>();
-    
-    static MouseData.MouseButtons[] mouseButtons = Enum.GetValues<MouseData.MouseButtons>();
+    static MouseButtons[] mouseButtons = Enum.GetValues<MouseButtons>();
 
     public override int Update(IPMmeterSettings allSettings, Player player)
     {
@@ -110,9 +109,9 @@ public static class Extensions
         float theshold = MathF.PI/8f - sign * 0.08726646f;
 
         if (Calc.AbsAngleDiff(angle, 0f) < theshold) return new Vector2(1f, 0f);
-        else if (Calc.AbsAngleDiff(angle, MathF.PI) < theshold) return new Vector2(-1f, 0f);
-        else if (Calc.AbsAngleDiff(angle, -MathF.PI / 2f) < theshold) return new Vector2(0f, -1f);
-        else if (Calc.AbsAngleDiff(angle, MathF.PI / 2f) < theshold) return new Vector2(0f, 1f);
+        if (Calc.AbsAngleDiff(angle, MathF.PI) < theshold) return new Vector2(-1f, 0f);
+        if (Calc.AbsAngleDiff(angle, -MathF.PI / 2f) < theshold) return new Vector2(0f, -1f);
+        if (Calc.AbsAngleDiff(angle, MathF.PI / 2f) < theshold) return new Vector2(0f, 1f);
         return new Vector2(Math.Sign(vector.X), Math.Sign(vector.Y));
     }
 }

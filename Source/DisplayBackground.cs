@@ -16,18 +16,18 @@ static class DisplayBackground
 
     public static void Render(float textWidth)
     {        
-        if (textWidth >= peak.size)
+        if (textWidth >= peak.Size)
             peak = new Gap(IPMmeterModule.Settings.BackGroundSettings.PeakLifeTime, textWidth);
 
-        if (peak.lifeTime <= 0f) peak.size -= Engine.DeltaTime * IPMmeterModule.Settings.BackGroundSettings.PeakDecreaseSpeed * 6f;
-        else peak.lifeTime -= Engine.DeltaTime;
+        if (peak.LifeTime <= 0f) peak.Size -= Engine.DeltaTime * IPMmeterModule.Settings.BackGroundSettings.PeakDecreaseSpeed * 6f;
+        else peak.LifeTime -= Engine.DeltaTime;
 
 
 
         if (!IPMmeterModule.Settings.ShowBG) return;
 
 
-        float bgWidth = peak.size;
+        float bgWidth = peak.Size;
 
         bool leftWall = (TextPos.X < 24f * Scale) && (Align == Alignment.Left);
         bool rightWall = (TextPos.X > 1920f - (24f * Scale)) && (Align == Alignment.Right);
